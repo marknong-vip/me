@@ -1,0 +1,404 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>在线简历</title>
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_908787_kekc8lrkg7e.css">
+  <style>
+    /*css reset*/ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    } 
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    /*common css  */
+    .pill {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      font-size: 14px;
+      width: 140px;
+      line-height: 20px;
+      text-align: center;
+      border-radius: 20px;;
+    }
+
+    .layout {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* page css*/
+    body {
+      font: 16px/1.5 SimSun, STKaiti, "Microsoft YaHei", SimHei, Helvetica, Arial;
+      color: #333;
+    }
+    
+    .wrapper {
+      background-color: #ececec;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      padding-top: 40px;
+    }
+
+    .aside {
+      float: left;
+      width: 280px;
+    }
+
+    .aside .user {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .aside .user h1{
+      font-size: 40px;
+    }
+
+    .aside .user h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      border-top: 1px solid #d6d6d6;
+      margin: 16px auto;
+    }
+
+    .aside .user::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      margin-top: 20px;
+      border-top: 20px solid #d6d6d6;
+      border-bottom: 20px solid transparent;
+      border-right: 140px solid #d6d6d6;
+      border-left: 140px solid transparent;
+    }
+
+    .aside .contact {
+      padding: 20px;
+    }
+
+    .aside .contact li {
+      border-bottom: 1px solid #d6d6d6;
+      list-style: none;
+      line-height: 40px;
+    }
+
+    .aside .contact .iconfont {
+      border-right: 1px solid #d6d6d6;
+      padding-right: 10px;
+      margin-right: 10px;
+      padding-left: 10px;
+      display: inline-block;
+      font-size: 20px;
+      color: #7bbaaa;
+    }
+
+    .aside .skills {
+      background: #7bbaaa;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .aside .skills dt {
+      color: #eee;
+      margin-top: 20px;
+    }
+
+    .aside .skills dd {
+      height: 4px;
+      background: #74c5b5;
+      border-radius: 2px;
+      margin-top: 10px;
+    }
+
+    .aside .skills .mastery {
+      height: 4px;
+      background: #fff;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .aside .others h2 {
+      margin: 20px 0 0 20px;
+    }
+
+    .main {
+      margin-left: 280px;
+      background: #fff;
+      padding: 40px;
+      margin-right: 20px;
+    }
+
+    .main .intro {
+      overflow: auto;
+    }
+    .main .intro img {
+      width: 80px;
+      height: 80px;
+      float: left;
+    }
+
+    .main .intro p {
+      margin-left: 120px;
+    }
+
+    .section {
+    }
+    
+    .section .pill {
+      float: left;
+      margin-top: 5px;
+    }
+
+    .section h2{
+      font-size: 40px;
+      color: #d9d9d9;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .section .more {
+      margin-left: 150px;
+      border-left: 1px solid #eee;
+    }
+    .section h3 {
+      color: #666;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .section h3 strong{
+      color: #111;
+      font-weight: bold;
+    }
+
+    .section h3::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 6px;
+      border: 2px solid #7bbaaa;
+      margin-right: 20px;
+      position: relative;
+      left: -5px;
+    }
+
+    .section h4 {
+      color: #111;
+      margin-top: 20px;
+      margin-left: 40px;
+    }
+
+
+    .section .more ul {
+      margin-left: 50px;
+      padding-bottom: 20px;
+    }
+    .section .more li {
+      color: #666;
+      font-size: 14px;
+    }
+
+
+    @media print {
+      .aside {
+        width: 200px;
+      }
+      .main {
+        margin-left: 200px;
+      }
+      .aside .user::after {
+      border-right-width: 100px;
+      border-left-width: 100px;
+    }
+      .pill {
+        display: none;
+      }
+
+      .section .more {
+        margin-left: 20px;
+      }
+
+      .wrapper {
+        margin: 0;
+      }
+    }
+
+    
+
+
+  
+  </style>
+</head>
+<body>
+  <div class="wrapper layout clearfix">
+    <div class="aside">
+      <div class="user">
+        <h1>陈咪咪</h1>
+        <p>应聘前端工程师</p>
+      </div>
+      <ul class="contact">
+        <li><span class="iconfont icon-email"></span> cmimi125@qq.com</li>
+        <li><span class="iconfont icon-phone"></span> 13661959616</li>
+        <li><span class="iconfont icon-experience"></span> 1年前端经验</li>
+        <li><span class="iconfont icon-education"></span> 专科</li>
+      </ul>
+      <div class="skills">
+          <h2>我的技能</h2>
+          <dl>
+            <dt>JavaScript/HTML5/CSS3/SVG</dt>
+            <dd><span class="mastery" style="width: 90%"></span></dd>
+            <dt>Vue/Vuex/Vue-router</dt>
+            <dd><span class="mastery" style="width: 80%"></span></dd>
+            <dt>Node.js</dt>
+            <dd><span class="mastery" style="width: 50%"></span></dd>
+            <dt>Webpack</dt>
+            <dd><span class="mastery" style="width: 70%"></span></dd>
+            <dt>ES6/Sass</dt>
+            <dd><span class="mastery" style="width: 70%"></span></dd>
+          </dl>
+        </div>
+      <div class="others">
+        <h2>其他</h2>
+        <ul class="contact">
+            <li><span class="iconfont icon-github"></span> <a href="https://github.com/ouyangbeibei?tab=repositories">Github</a></li>
+            <li><span class="iconfont icon-blog"></span> <a href="https://www.jianshu.com/u/c85ce5fc28d1">博客</a></li>
+            <!-- <li><span class="iconfont icon-zhihu"></span> <a href="https://jirengu.com">知乎</a></li> -->
+          </ul>
+      </div>
+    </div>
+    <div class="main">
+      <div class="intro clearfix">
+        <img src="https://resumer-vue.oss-cn-beijing.aliyuncs.com/11.jpg" alt="照片">
+        <p>1、熟悉JavaScript、HTML/HTML5、CSS/CSS3、Ajax等前端开发语言。 2、熟练使用vscode、WebStorm、git命令工具，Photoshop。 3、熟悉运用Bootstrap、jQuery、Vue等主流前端框架。
+        4、可以使用REM，vw/vh，媒体查询等技术制作移动端自适应的网页。 5、了解node.js后端或服务器语言。 6、掌握Scss, less的使用，理解MVC, MVVM思想，掌握HTTP基础。 7、阅读和分析过部分框架源码（jQuery）
+        。</p>
+      
+      </div>
+      <div class="education section">
+        <h2>教育经历</h2>
+        <div class="item">
+            <!-- <div class="left pill">09/2013 - 07/2017</div> -->
+            <div class="more">
+              <h3><strong>江苏开放大学</strong>大专</h3>
+              <!-- <ul>
+                <li>专业排名前20%</li>
+              </ul> -->
+  
+            </div>
+      </div>
+      <div class="experience section">
+        <h2>工作经历</h2>
+        <div class="detail">
+          <div class="left pill">07/2018 - 2019</div>
+          <div class="more">
+            <h3><strong>武汉米色设计（电商）</strong>, 前端开发工程师</h3>
+            <ul>
+              <li>工作期间参与开发和维护公司官网</li>
+              <li>公司前端编码规范的制定</li>
+              <!-- <li>多次作为项目负责人主导项目立项到上线整个过程</li> -->
+            </ul>
+            <!-- <h4>电商项目</h4>
+            <ul>
+              <li><strong>项目介绍：</strong> 该项目</li>
+              <li><strong>技术栈：</strong>vue、element-ui、 CSS/CSS3、LeanCloud、webpack、es6</li>
+              <li><strong>项目成果:</strong> 项目大大提升了Vue技术学习技术，更好的实现功能的体验。</li>
+            </ul> -->
+
+            <!-- <h4>仿网易云音乐（移动端-jQuery项目</h4>
+            <ul>
+                <li><strong>项目介绍：</strong> 该项目是网易云移动端音乐播放网站，主要有播放-显示歌词，首页-推荐音乐，热歌榜，搜索。1、播放，显示歌词页面：使用jQuery，调用QQ音乐API，来播放。 2、首页-推荐音乐：tab切换事件---自定义事件，监听siteNav会冒泡。 3、热歌榜：点击热歌榜，请求HTML。（请求json） 4、搜索:函数节流-用promise,模拟后台数据，setTimeout一段事件后，返回resolve,name里面有数组，并返回这些数组。
+                5、运用谷歌浏览器进行调试。</li>
+                <li><strong>技术栈：</strong>jQuery、 网易云音乐+QQ音乐API、LeanCloud数据管理、 git、 github、 Iconfont阿里巴巴矢量图库、 草料二维码</li>
+                <li><strong>项目成果:</strong>大大提升了移动端学习体验，获得个人音乐盒，为微信端运营提供技术支撑</li> -->
+            </ul>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="projects section">
+        <h2>项目经历</h2>
+        <div class="item">
+          <div class="left pill">02/2018 - 04/2018</div>
+          <div class="more">
+            <h3>在线简历编辑器-vue.js</h3>
+            <ul>
+                <li>
+                    <strong>项目介绍：</strong> 该项目在线简历编辑器可以登录，选项编辑内容，预览。</li>
+                <li>
+                    <strong>技术栈：</strong>vue、vue-router、vuex、element-ui、 CSS/CSS3、LeanCloud、webpack、es6</li>
+                <li><strong>项目源码:</strong><a href="https://github.com/ouyangbeibei/resumer" target="_blank">github.com</a></li>
+                <li><strong>预览项目:</strong><a href="https://ouyangbeibei.github.io/resumer/dist/" target="_blank">点击查看</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="item">
+            <div class="left pill">07/2018 - 08/2018</div>
+            <div class="more">
+              <h3>仿网易云音乐（移动端）jQuery</h3>
+              <ul>
+                <li>
+                    <strong>项目介绍：</strong> 该项目是网易云移动端音乐播放网站，主要有播放-显示歌词，首页-推荐音乐，热歌榜，搜索。1、播放，显示歌词页面：使用jQuery，调用QQ音乐API，来播放。 2、首页-推荐音乐：tab切换事件---自定义事件，监听siteNav会冒泡。
+                    3、热歌榜：点击热歌榜，请求HTML。（请求json） 4、搜索:函数节流-用promise,模拟后台数据，setTimeout一段事件后，返回resolve,name里面有数组，并返回这些数组。 5、运用谷歌浏览器进行调试。
+                </li>
+                <li>
+                    <strong>技术栈：</strong>jQuery、 网易云音乐+QQ音乐API、LeanCloud数据管理、 git、 github、 Iconfont阿里巴巴矢量图库、 草料二维码</li>
+                  <li><strong>项目源码:</strong><a href="https://github.com/ouyangbeibei/couldMusic" target="_blank">github.com</a></li>
+                  <li><strong>预览项目:</strong><a href="https://ouyangbeibei.github.io/couldMusic/." target="_blank">点击查看（pc:电脑控制台调到移动端）</a></li>
+                <li>
+                    <strong>预览项目:</strong>
+                    <a href="https://resumer-vue.oss-cn-beijing.aliyuncs.com/1562305394%281%29.jpg" target="_blank">点击查看（移动端:微信二维码扫一扫移动端）</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+              <div class="left pill">08/2018 - 10/2018</div>
+              <div class="more">
+                <h3>note便利贴node.js</h3>
+                <ul>
+                    <li><strong>项目介绍：</strong>便利贴，主要有第三方认证登录。可添加，编辑，删除标签。保存可发到服务器上。</li>
+                    <li><strong>技术栈：</strong>webpack + node.js + less.css + Express</li>
+                    <li><strong>项目源码:</strong><a href="https://github.com/ouyangbeibei/express-mynote" target="_blank">github</a></li>
+                    
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+                <div class="left pill">02/2018 - 08/2018</div>
+                <div class="more">
+                  <h3>豆瓣电影</h3>
+                  <ul>
+                      <li><strong>项目介绍：</strong>做一个移动端豆瓣电影推荐入口，展示 Top250和北美排行电影列表，可搜索电影</li>
+                      <li><strong>技术栈：</strong> jQuery + Ajax</li>
+                      <li><strong>项目源码:</strong><a href="https://github.com/ouyangbeibei/project/tree/master/douban.md" target="_blank">github.com</a></li>
+                      <li><strong>预览项目:</strong><a href="http://output.jsbin.com/difiqipifa" target="_blank">点击查看</a></li>
+                  </ul>
+                </div>
+              </div>
+      </div>
+      <div class="about-me section">
+        <h2>个人评价</h2>
+        <p>痴迷新技术，喜欢承担有技术的工作，爱分享，善于知识总结梳理</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
